@@ -37,11 +37,19 @@ a, a:visited {
   }
 }
 
+/* HERO STYLES */
+
+.full-hero {
+  height: 50vh;
+}
+
 .brand {
   font-size: 1.5em;
   font-weight: 900;
   margin: 8px 0;
 }
+
+/* GRID STYLES */
 
 .column {
   @media screen and (min-width: 768px) {
