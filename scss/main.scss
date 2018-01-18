@@ -1,7 +1,7 @@
 @import "ibm-colors";
 @import "variables";
 
-/* GLOBAL */
+/* Global */
 
 html, body {
   font-family: $default-font;
@@ -47,7 +47,7 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   }
 }
 
-/* HERO */
+/* Hero */
 
 .full-hero {
   height: 50vh;
@@ -59,7 +59,7 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   margin: 8px 0;
 }
 
-/* GRID */
+/* Grid */
 
 .column {
   @media screen and (min-width: $phone-max-width) {
@@ -85,7 +85,7 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   }
 }
 
-/* BIO */
+/* Bio */
 
 .bio-box {
   border: 1px solid black;
@@ -101,7 +101,7 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   overflow: hidden;
 }
 
-/* SOCIAL LINKS */
+/* Social Links */
 
 .social-list {
   list-style: none;
