@@ -4,10 +4,11 @@
 @import "ibm-colors";
 @import "variables";
 
-/* GLOBAL */
+/* Global */
 
 html, body {
   font-family: $default-font;
+  line-height: 1.48;
   margin: 0;
   padding: 0;
 }
@@ -21,7 +22,6 @@ a:visited {
 }
 
 p, h1, h2, h3, h4, h5, h6, ol, ul {
-  line-height: 1.48;
   margin: 1em 0 0 0;
 }
 
@@ -34,6 +34,10 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
     margin: auto;
     max-width: $container-max-width;
   }
+}
+
+.text {
+  max-width: $text-max-width;
 }
 
 .attention-background {
@@ -50,7 +54,7 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   }
 }
 
-/* HERO */
+/* Hero */
 
 .full-hero {
   height: 50vh;
@@ -62,7 +66,7 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   margin: 8px 0;
 }
 
-/* GRID */
+/* Grid */
 
 .column {
   @media screen and (min-width: $phone-max-width) {
@@ -71,10 +75,26 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   }
 }
 
+.text-column {
+  max-width: $text-max-width;
+  @media screen and (min-width: $min-viewport-width-for-sidebar) {
+    flex: 0 2 $text-max-width;
+    margin-right: 16px;
+  }
+}
+
+.sidebar-column {
+  max-width: $text-max-width;
+  @media screen and (min-width: $min-viewport-width-for-sidebar) {
+    flex: 1 1 296px;
+  }
+}
+
 .row {
   @media screen and (min-width: $phone-max-width) {
     align-items: stretch;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     :last-child {
       margin-right: 0;
@@ -88,7 +108,7 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   }
 }
 
-/* BIO */
+/* Bio */
 
 .bio-box {
   border: 1px solid black;
@@ -104,7 +124,7 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   overflow: hidden;
 }
 
-/* SOCIAL LINKS */
+/* Social Links */
 
 .social-list {
   list-style: none;

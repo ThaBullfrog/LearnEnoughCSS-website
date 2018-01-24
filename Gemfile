@@ -12,6 +12,7 @@ gem "jekyll", "~> 3.7"
 
 group :jekyll_plugins do
   gem "jekyll-autoprefixer", "~> 1.0"
+  gem "jekyll-haml", "~> 0.1"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

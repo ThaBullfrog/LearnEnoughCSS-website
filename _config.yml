@@ -25,6 +25,7 @@ sass:
   style: compressed
 plugins:
   - jekyll-autoprefixer
+  - jekyll-haml
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
