@@ -59,6 +59,9 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
 header, .header {
   background: black;
   color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
   > nav > ul {
     float: right;
     margin: 0;
@@ -71,8 +74,8 @@ header, .header {
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
-        &:hover {
-          text-decoration: underline;
+        &:hover, &:active {
+          color: color('orange', 30);
         }
       }
     }
@@ -101,6 +104,7 @@ header, .header {
 
 .full-hero {
   height: 50vh;
+  padding-top: 128px;
 }
 
 .brand {
