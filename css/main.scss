@@ -13,6 +13,10 @@ html, body {
   padding: 0;
 }
 
+body {
+  padding-top: 128px;
+}
+
 a {
   color: $link-color;
 }
@@ -60,6 +64,7 @@ header, .header {
   background: black;
   color: white;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 20;
   > nav > ul {
@@ -80,7 +85,7 @@ header, .header {
       }
     }
     > li ~ li {
-      border-left: 1px solid white;
+      border-left: 1px solid color('gray', 50);
       padding-left: 1em;
     }
   }
@@ -103,14 +108,50 @@ header, .header {
 /* Hero */
 
 .full-hero {
-  height: 50vh;
-  padding-top: 128px;
+  box-sizing: border-box;
+  height: 100vh;
+  margin-top: -128px;
+  &::after {
+    border: 16px solid;
+    border-color: #fff transparent transparent;
+    bottom: 16px;
+    color: white;
+    content: "";
+    font-size: 3em;
+    height: 0;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: 0;
+  }
 }
 
-.brand {
-  font-size: 1.5em;
-  font-weight: 900;
-  margin: 8px 0;
+.hero-home {
+  background-color: $primary-color;
+  background-image: url(/images/shark.jpg);
+  background-position: center top;
+  background-size: cover;
+  color: black;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translate(0, -50%);
+  h1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 7vw;
+    margin-bottom: 0.25em;
+  }
+  .social-link {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #557c83;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
 }
 
 /* Grid */
@@ -164,7 +205,7 @@ header, .header {
   font-size: 1rem;
   margin: 1em 0.5em 0 0.5em;
   padding: 0 1em 1em 1em;
-  width: calc(25% - 1em);
+  width: calc(33.33% - 1em);
 }
 
 .bio-wrapper {
