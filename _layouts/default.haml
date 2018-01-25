@@ -3,19 +3,12 @@
 
 !!!
 %html{ lang: "en" }
-  %head
-    %meta{ content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type" }
-    %meta{ charset: "utf-8" }
-    %meta{ content: "ie=edge", "http-equiv" => "x-ua-compatible" }
-    %meta{ name: "viewport", content: "width=device-width, initial-scale=1" }
-    %title Home
-    %link{ href: "https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900", 
-           rel: "stylesheet" }
-    %link{ href: "css/main.css", rel: "stylesheet", type: "text/css" }
+  {% haml head.haml %}
   %body
+    {% haml header.haml %}
     .attention-background
       .container.full-hero.hero-home
-        .brand Company Name
+        %h1 Header 1
         %ul.social-list
           %li
             %a.social-link{ href: "http://example.com/" } Fb
@@ -112,3 +105,4 @@
           .column.right-when-column
             :markdown
               Website designed by [Bullfrog Websites](https://bullfrogwebsites.com)
+  }

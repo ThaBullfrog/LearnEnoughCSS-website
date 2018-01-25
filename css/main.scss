@@ -54,6 +54,49 @@ p, h1, h2, h3, h4, h5, h6, ol, ul {
   }
 }
 
+/* Header */
+
+header, .header {
+  background: black;
+  color: white;
+  > nav > ul {
+    float: right;
+    margin: 0;
+    padding: 95px 1em 0 0;
+    > li {
+      display: inline-block;
+      margin-left: 1em;
+      a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    > li ~ li {
+      border-left: 1px solid white;
+      padding-left: 1em;
+    }
+  }
+}
+
+.header-logo {
+  background: black;
+  box-sizing: border-box;
+  display: block;
+  height: 128px;
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
+  width: 128px;
+  img {
+    height: 100%;
+  }
+}
+
 /* Hero */
 
 .full-hero {
